@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Prácticas - Docente</title>
+    <link rel="stylesheet" href="estiloAPD.css">
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+    <nav>
+      <header>
+        <div class="bar"></div>
+        <div class="user">
+          <img src="perfil.png" alt="" />
+          <div class="name">Agregar Practicas</div>
+        </div>
+      </header>
+
+      <div class="links">
+        <a href="Perfil_docente.html">
+          <div class="icon">
+            <span
+              class="iconify"
+              data-icon="flat-color-icons:assistant"
+              data-width="32"
+              data-height="32"
+            ></span>
+          </div>
+          <div class="title">Perifl de usuario</div>
+        </a>
+        <a href="AP_docente.html">
+          <div class="icon">
+            <span
+              class="iconify"
+              data-icon="flat-color-icons:calendar"
+              data-width="32"
+              data-height="32"
+            ></span>
+          </div>
+          <div class="title">Agregar Practica</div>
+        </a>
+        <a href="home.html">
+            <div class="icon">
+                <span class="iconify" data-icon="mdi-light:power" data-width="32" data-height="32"></span>
+            </div>
+            <div class="title">Cerrar Sesión</div>
+        </a>
+        <a href="inicio_docente.html">
+            <div class="icon">
+              <span class="iconify" data-icon="bx:bx-arrow-back" data-width="32" data-height="32"></span>
+            </div>
+            <div class="title">Volver</div>
+          </a>
+      </div>
+    </nav>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <script src="AP_docente.js"></script>
+  </body>
+<body>
+
+    <main  style="margin-left: 800px;">
+        <h2>Prácticas Asignadas</h2>
+        <table id="tabla-practicas">
+            <thead style="display: none;">
+                <tr>
+                    <th>Estudiante</th>
+                    <th>Duración</th>
+                    <th>Empresa</th>
+                    <th>Encargado</th>
+                    <th>Contacto</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="lista-practicas">
+                <!-- Aquí se llenarán dinámicamente las prácticas asignadas -->
+            </tbody>
+        </table>
+
+        <section class="form-register">
+        
+        <form onsubmit="agregarPractica(event)">
+            <h2>Asignar Nueva Práctica</h2>
+            <input class="controls" type="text" name="nombre-estudiante" id="nombre-estudiante" placeholder="Nombre del estudiante">
+            <input class="controls" type="text" name="duracion" id="duracion" placeholder="Duración de la práctica">
+            <input class="controls" type="text" name="Empresa" id="empresa" placeholder="Nombre de la empresa">
+            <input class="controls" type="text" name="encargado" id="encargado" placeholder="Nombre del encargado">
+            <input class="controls" type="text" name="Contacto" id="contacto" placeholder="Contacto del encargado">
+            <button type="submit">Agregar</button>
+        </form>
+        </section>
+    </main>
+
+    <script src="AP_docente.js"></script>
+</body>
+
+</html>

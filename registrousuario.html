@@ -1,0 +1,65 @@
+<!DOCTYPE htm>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notificación</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="registrousuario.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="login-container">
+        <h2>Registro de usuario</h2>
+        
+
+        <form action="">
+          <p>
+            <label for="Nombre">Nombre</label>
+            <input class="input" type="text" name="Nombre" />
+          </p>
+
+          <p>
+            <label for="Apellido">Apellido</label>
+            <input class="input" type="text" name="Apellido" />
+          </p>
+
+          <p>
+            <label for="correo">Correo</label>
+            <input class="input" type="email" name="correo" />
+          </p>
+
+          <p>
+            <label for="contraseña">Contraseña</label>
+            <input class="input" type="password" name="contraseña" />
+          </p>
+
+          <div class="options">
+            <div>
+              Acepto los terminos y condiciones <input type="checkbox" name="de acuerdo" id="" />
+            </div>
+          </div>
+
+          <p>
+            <input class="btn btn-login" type="submit" value="Registrarse" />
+          </p>
+          <p>
+            <input id="btn-cancelar" class="btn btn-login" type="button" value="Cancelar" />
+          </p>
+        
+        </form>
+      </div>
+      <img src="https://seeklogo.com/images/U/uleam-logo-853FE191D4-seeklogo.com.png" alt="Descripción de la imagen" class="welcome-screen-container"/>
+    </div>
+
+    <script>
+        document.getElementById('btn-cancelar').addEventListener('click', function() {
+          window.location.href = 'home.html';
+        });
+      </script>
+  </body>
+</html>

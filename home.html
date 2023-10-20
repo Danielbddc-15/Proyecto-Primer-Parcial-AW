@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Prácticas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('uleam.png'); background-size: cover;">
+    <header>
+        <img src="logo.png" alt="Logo Institución" class="logo">
+        <nav>
+            <ul>
+                <li><a href="https://www.uleam.edu.ec/informacion-institucional/">Acerca de</a></li>
+                <li><a href="https://www.uleam.edu.ec/contactos/">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="b-container">
+        <h1>Bienvenido</h1>
+        <h2>Acceder como:</h2>
+        <button onclick="mostrarLogin('estudiantes')"> Estudiante</button>
+        <button onclick="mostrarLogin('docentes')">Docente</button>
+    </div>
+    
+  <div class="modal" id="login-modal">
+     <div class="form-container" id="estudiantes-login" style="display:none;">
+        <div class="login-container">
+            <form onsubmit="return validarEstudiante()">
+                <h1><i class="fas fa-sign-in-alt"></i> Estudiante</h1>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Correo electrónico" id="estudiante-username" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Contraseña" id="estudiante-password" required>
+                    <div>
+                        <a href="#">Olvidé mi contraseña</a>
+                      </div>
+                      <div>
+                        <a href="registrousuario.html">¿No tienes cuenta?</a>
+                      </div>
+                </div>
+                <div class="button-container">
+                    <button type="button" class="btn-cancelar" onclick="cancelar()">Cancelar</button>
+                    <button type="submit" class="btn-aceptar"><i class="fas fa-check"></i> Ingresar</button>
+                </div>
+            </form>
+        </div>
+     </div>
+ 
+     <div class="form-container" id="docentes-login" style="display:none;">
+        <div class="login-container">
+            <form onsubmit="return validarDocente()">
+                <h1><i class="fas fa-sign-in-alt"></i> Docente</h1>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Correo electrónico" id="docente-username" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Contraseña" id="docente-password" required>
+                <div>
+                    <a href="#">Olvidé mi contraseña</a>
+                  </div>
+                  <div>
+                    <a href="registrousuario.html">¿No tienes cuenta?</a>
+                  </div>
+                </div>  
+
+                <div class="button-container">
+                    <button type="button" class="btn-cancelar" onclick="cancelar()">Cancelar</button>
+                    <button type="submit" class="btn-aceptar"><i class="fas fa-check"></i> Ingresar</button>
+                </div>
+            </form>
+        </div>
+     </div>
+ </div>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Mi Sitio Web</p>
+        <img src="facci.png" alt="Logo Facci" >
+    </footer>
+</body>
+</html>
