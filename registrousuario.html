@@ -15,51 +15,81 @@
     <div class="form-container">
       <div class="login-container">
         <h2>Registro de usuario</h2>
-        
 
-        <form action="">
-          <p>
-            <label for="Nombre">Nombre</label>
-            <input class="input" type="text" name="Nombre" />
-          </p>
-
-          <p>
-            <label for="Apellido">Apellido</label>
-            <input class="input" type="text" name="Apellido" />
-          </p>
-
-          <p>
-            <label for="correo">Correo</label>
-            <input class="input" type="email" name="correo" />
-          </p>
-
-          <p>
-            <label for="contraseña">Contraseña</label>
-            <input class="input" type="password" name="contraseña" />
-          </p>
-
-          <div class="options">
-            <div>
-              Acepto los terminos y condiciones <input type="checkbox" name="de acuerdo" id="" />
+        <form action="" class="formulario" id="formulario">
+         
+          <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Kayla Elizabeth">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
+            <p class="formulario__input-error">El nombre no puede contener números ni caracteres especiales.</p>
+          </div>
+    
+        
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
           </div>
 
-          <p>
-            <input class="btn btn-login" type="submit" value="Registrarse" />
-          </p>
-          <p>
-            <input id="btn-cancelar" class="btn btn-login" type="button" value="Cancelar" />
-          </p>
-        
+           <!-- Grupo: Contraseña -->
+           <div class="formulario__grupo" id="grupo__password">
+            <label for="password" class="formulario__label">Contraseña</label>
+            <div class="formulario__grupo-input">
+              <input type="password" class="formulario__input" name="password" id="password">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+          </div>
+
+           <!-- Grupo: Contraseña 2 -->
+           <div class="formulario__grupo" id="grupo__password2">
+            <label for="password2" class="formulario__label">Repetir Contraseña</label>
+            <div class="formulario__grupo-input">
+              <input type="password" class="formulario__input" name="password2" id="password2">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+          </div>
+    
+          <!-- Grupo: Terminos y Condiciones -->
+          <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+              <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+              Acepto los Terminos y Condiciones
+            </label>
+          </div>
+    
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+          </div>
+    
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+
+          </div>
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <input id="btn-cancelar" class="formulario__btn" type="button" value="Cancelar" />
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+          </div>
         </form>
       </div>
       <img src="https://seeklogo.com/images/U/uleam-logo-853FE191D4-seeklogo.com.png" alt="Descripción de la imagen" class="welcome-screen-container"/>
     </div>
 
+     <script src="registrousuario.js"></script>
     <script>
         document.getElementById('btn-cancelar').addEventListener('click', function() {
           window.location.href = 'home.html';
         });
       </script>
+      <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   </body>
 </html>

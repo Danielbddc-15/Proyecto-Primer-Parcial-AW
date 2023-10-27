@@ -5,14 +5,14 @@ body {
 }
 
 header {
-    background-color: rgba(60, 148, 72, 0.9); /* Cambiamos el color de fondo y añadimos opacidad */
-    padding: 15px 15px; /* Aumentamos el padding */
+    background-color: rgba(60, 148, 72, 0.9); 
+    padding: 15px 15px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 header img {
-    width: 100px; /* Cambia este valor según el tamaño que desees */
+    width: 100px; 
     margin-right: 100px;
 }
 
@@ -20,15 +20,15 @@ header nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    transition: color 0.3s; /* Transición de color durante 0.3 segundos */
+    transition: color 0.3s; 
 }
 
 header nav ul li a:hover {
-    color: #00254d; /* Color al pasar el cursor sobre el enlace */
+    color: #00254d; 
 }
 
 .logo {
-    max-height: 70px; /* Ajustamos el tamaño máximo del logo */
+    max-height: 70px; 
 }
 
 nav ul {
@@ -39,14 +39,14 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-right: 30px; /* Reducimos el espacio entre elementos del menú */
+    margin-right: 30px; 
 }
 
 nav a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
-    font-size: 18px; /* Aumentamos el tamaño de las letras en el menú */
+    font-size: 18px; 
 }
 
 .login-container {
@@ -99,14 +99,14 @@ button:hover {
 }
 
 form input, form button {
-    width: calc(100% - 20px); /* Ajustamos el ancho de los elementos y reducimos el espacio */
+    width: calc(100% - 20px); 
     padding: 10px;
     margin-bottom: 30px;
 }
 
 .button-container {
-    display: flex; /* Utilizamos flexbox para alinear los botones horizontalmente */
-    justify-content: space-between; /* Espacio entre los elementos para que estén en los extremos */
+    display: flex; 
+    justify-content: space-between; 
 }
 
 .back-button, button[type="submit"] {
@@ -146,7 +146,7 @@ form input, form button {
     backdrop-filter: blur(10px);
 }
 footer img {
-    width: 1000px; /* Ajusta el tamaño de la imagen según tus preferencias */
+    width: 1000px;
     margin-top: -30px;
 }
 .b-container{
@@ -157,4 +157,16 @@ footer img {
     padding: 70px;
     max-width: 400px;
     margin: 10% auto;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+.error-messageE {
+    color: red;
+    font-size: 14px;
+    display: none;
 }

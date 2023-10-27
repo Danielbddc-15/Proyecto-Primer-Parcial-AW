@@ -12,7 +12,7 @@ function mostrarLogin(tipo) {
 }
 
 function cancelar() {
-    window.location.href = 'home.html'; // Cambia 'index.html' por la ruta de tu página de inicio
+    window.location.href = 'home.html'; 
 }
 
 function ocultarLogin() {
@@ -20,25 +20,73 @@ function ocultarLogin() {
     modal.classList.remove('active');
 }
 
+function validarCorreo(correo) {
+    var expresionRegular = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return expresionRegular.test(correo);
+}
+
 
 function validarEstudiante() {
     const username = document.getElementById('estudiante-username').value;
     const password = document.getElementById('estudiante-password').value;
 
-    // Realizar validaciones aquí si es necesario...
+    const errorUsernameE = document.getElementById("error-usernameE");
+    const errorPasswordE = document.getElementById("error-passwordE");
 
-    // Redirigir a la página correspondiente
+    // Validar correo
+    if (!validarCorreo(username)) {
+        errorUsernameE.textContent = "Correo electrónico inválido";
+        errorUsernameE.style.display = "block";
+        return false;
+    } else {
+        errorUsernameE.textContent = "";
+        errorUsernameE.style.display = "none";
+    }
+
+    // Validar contraseña
+    if (password.trim() === '') {
+        errorPasswordE.textContent = "La contraseña no puede estar en blanco";
+        errorPasswordE.style.display = "block";
+        return false;
+    } else {
+        errorPasswordE.textContent = "";
+        errorPasswordE.style.display = "none";
+    }
+
+    // Si los datos son correctos, redirigir a la página correspondiente
     window.location.href = 'inicio_estudiante.html';
-    return false; // Esto evita que el formulario se envíe de manera convencional
+    return false;
 }
+
 
 function validarDocente() {
     const username = document.getElementById('docente-username').value;
     const password = document.getElementById('docente-password').value;
 
-    // Realizar validaciones aquí si es necesario...
+    const errorUsername = document.getElementById("error-username");
+    const errorPassword = document.getElementById("error-password");
 
-    // Redirigir a la página correspondiente
+    // Validar correo
+    if (!validarCorreo(username)) {
+        errorUsername.textContent = "Correo electrónico inválido";
+        errorUsername.style.display = "block";
+        return false;
+    } else {
+        errorUsername.textContent = "";
+        errorUsername.style.display = "none";
+    }
+
+    // Validar contraseña
+    if (password.trim() === '') {
+        errorPassword.textContent = "La contraseña no puede estar en blanco";
+        errorPassword.style.display = "block";
+        return false;
+    } else {
+        errorPassword.textContent = "";
+        errorPassword.style.display = "none";
+    }
+
+    // Si los datos son correctos, redirigir a la página correspondiente
     window.location.href = 'inicio_docente.html';
-    return false; // Esto evita que el formulario se envíe de manera convencional
+    return false;
 }

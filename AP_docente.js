@@ -1,7 +1,7 @@
-// Simulación de datos de prácticas
+
 const practicasAsignadas = [];
 
-// Función para cargar las prácticas asignadas en la lista
+
 function cargarPracticas() {
     const listaPracticas = document.getElementById('lista-practicas');
     const storedPracticas = JSON.parse(localStorage.getItem('practicas'));
@@ -73,10 +73,10 @@ function agregarPractica(event) {
     document.getElementById('contacto').value = '';
 
     if (practicasAsignadas.length === 1) {
-        // Mostrar los encabezados si es la primera práctica
+        
         document.getElementById('tabla-practicas').querySelector('thead').style.display = 'table-header-group';
     }
-        // Si ya no hay prácticas, ocultar los encabezados
+        
         if (practicasAsignadas.length === 0) {
             document.getElementById('tabla-practicas').querySelector('thead').style.display = 'none';
         }
